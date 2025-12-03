@@ -8,20 +8,29 @@
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). 
 // Questo richiederà un minimo di ricerca.
 
-let imputage = parseInt( prompt("Inserisci la tua età"));
-let imputkm = parseInt( prompt ("Inserisci il numero di km da percorrere"));
 
-let price;
+let inputage = parseInt( prompt("Inserisci la tua età"))
+ while (isNaN(inputage)) {
+    inputage= parseInt(prompt("Attenzione!Inserisci un valore numerico"))};
 
-if (imputage < 18) { 
-    let price = (0.21 * imputkm) - (((0.21 * imputkm) * 20) / 100);
-     console.log(price +"€"); } 
-      else if (imputage > 65) { 
-       let price = (0.21 * imputkm) - (((0.21 * imputkm) * 40) / 100);
-       console.log(price +"€"); }
-        else if (imputage = (18 < 65)){ 
-         let price = (0.21 * imputkm);
-         console.log(price +"€"); }
+
+let inputkm = parseInt( prompt ("Inserisci il numero di km da percorrere"))
+while (isNaN(inputkm)) {
+    inputkm= parseInt(prompt("Attenzione! Inserisci un valore numerico"))};
+
+let price 
+
+if (inputage < 18) { 
+    let price = (0.21 * inputkm) - (((0.21 * inputkm) * 20) / 100);
+     console.log(price.toFixed(2) +"€"); } 
+      else if (inputage > 65) { 
+       let price = (0.21 * inputkm) - (((0.21 * inputkm) * 40) / 100);
+       console.log(price.toFixed(2) +"€"); }
+        else if (inputage > 18 && inputage < 65){ 
+         let price = (0.21 * inputkm);
+         console.log(price.toFixed(2) +"€"); };
+
+        
 
 
 
