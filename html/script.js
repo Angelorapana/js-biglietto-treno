@@ -15,10 +15,14 @@ let price;
 
 if (imputage < 18) { 
     let price = (0.21 * imputkm) - (((0.21 * imputkm) * 20) / 100);
-     console.log(price +"€");
+     console.log(price +"€"); } 
+      else if (imputage > 65) { 
+       let price = (0.21 * imputkm) - (((0.21 * imputkm) * 40) / 100);
+       console.log(price +"€"); }
+        else if (imputage = (18 < 65)){ 
+         let price = (0.21 * imputkm);
+         console.log(price +"€"); }
 
 
-else (imputage > 65) { 
-    let price = (0.21 * imputkm) - (((0.21 * imputkm) * 40) / 100);
-     console.log(price +"€");
-};
+
+
